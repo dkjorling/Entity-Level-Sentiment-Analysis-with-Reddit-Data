@@ -1,4 +1,4 @@
-\textbf{Entity-Level-Sentiment-Analysis-with-Reddit-Data}
+**Entity-Level-Sentiment-Analysis-with-Reddit-Data**
 
 This project aims to track sentiment analysis for individual players on the Los Angeles Lakers team over the course of the 2022-23 season. To accomplish this, I utilized the reddit API to gather all post and comment data from the Lakers subreddit starting from the beginning of the season until the final play-in game before the playoffs.
 
