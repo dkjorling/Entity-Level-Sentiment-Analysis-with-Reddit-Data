@@ -1,0 +1,7 @@
+1) download all comment data
+2) begin with titles and text. Try to id entities and do sentiment analysis just on this
+2) Subset data and begin analysis on tiny portion of data to see if methods work/what methods work
+3) Sharpen techniques on small data subset and finalize
+4) Iterate through entirety of dataset, saving sentiment rating per day? maybe per post? probably easier to get a per-day rating for each player which is manageable
+5) collect statistics
+6) design and integrate dashboard
