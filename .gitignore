@@ -4,3 +4,6 @@ venv/
 key.txt
 ipynb_checkpoints/
 *.DS_Store
+data/
+nba_data
+*.ipynb
