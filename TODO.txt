@@ -1,25 +1,48 @@
-1) download all needed nba data and create functions for dashboard
-	a) check contents of other api data
-		i) this has better game date...use it...see example for celtics
-	*try to find num possessions eahc player played in each game at a minimum
-	b) turn team (team_date class?) and player (player_date class?) into classes and put current functions in respective classes
-		i) create beginning roster list
-		ii) create transaction dict that alters the roster list by date ( 1 in dictionary with player in and date, 1 out dictionary with player out and date) this alters roster list
-		ii) create transaction dict w date and player in/out
-		iii) create get_current_roster method and integrate into player class
-		iv) last game, last opponent
-	c) *** create rolling team statistics as well. include: over last x games/ n days and show:
-		i) record (already have functions for this)
-		ii) ppg opg (think i already have this data
-		iii) more advanced stats....note these only need to be in per game....create additional features that are currently not in the list
+May 2:
 
-nlp
+-add parent level 1 and 2 entities/counts
 
-2) begin with titles and text. Try to id entities and do sentiment analysis just on this
+-begin sensitivity anaylsis, familiarize yourself w vader and getting general text sentiment
+
+*****THOUGHT********
+The challenges of the sensitivity analysis are twofold:
+1) distinguishing sentiment of individuals mentioned in same post
+	a) idea: tokenize into sentences if mentioned different sentences, else take sentiment of that sentence
+2) training in specific lexicon, that is sports, specifically nba, and social media
+	b) use the specific name reference to add context!!!***
+
+
+## emojis ##
+https://towardsdatascience.com/emojis-aid-social-media-sentiment-analysis-stop-cleaning-them-out-bb32a1e5fc8e
+
+## we have options for emoji utilization ##
+1) find a sentiment model that allows emojis to be passed as tokens
+2) replace emojis w descriptions
+3) concatenate to end of post/tweet/sentence
+4) treat as metadata, use sentiment lexicon rankings to layer in, while training text with no emojis
+
+*twitter roberta can directly take in emojis and perform well*
+*vader sentiment also seems very good.....*
+
+FOR NOW: create df column for posts/comments
+
+## another thing to think ab: should i not remove periods so I can keep sentences? will this make entity-level sa easier??
+
+## top x nicknames or funniest nicknames
+
+
+
+
 2) Subset data and begin analysis on tiny portion of data to see if methods work/what methods work
 3) Sharpen techniques on small data subset and finalize
 4) Iterate through entirety of dataset, saving sentiment rating per day? maybe per post? probably easier to get a per-day rating for each player which is manageable
-5) collect statistics
+
 6) design and integrate dashboard
 	i) home page: last game and opponent w score....last 5 w results and opponents, win streak, 		current  record, sentiment, pelinka sentiment, bus sentiment, hamm sentiment, top player sentiment, top trending player sentiment (by gain), bottom/bottom trending
 	ii) individual player sentiment and can alter time for individual player here
+
+
+
+
+### dashboard design ###
+-would be rad to embed youtube highlight vids for each player!
