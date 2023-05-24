@@ -1,7 +1,17 @@
 **Entity-Level-Sentiment-Analysis-with-Reddit-Data**
 
-This project aims to track sentiment analysis for individual players on the Los Angeles Lakers team over the course of the 2022-23 season. To accomplish this, I utilized the reddit API to gather all post and comment data from the Lakers subreddit starting from the beginning of the season until the final play-in game before the playoffs.
+This tracks sentiment analysis for individual players on the Los Angeles Lakers team over the course of the 2022-23 season. To accomplish this, I utilized the PushShift API to gather all post and comment data from the Lakers subreddit starting from the beginning of the season until the final play-in game before the playoffs. Player statistics were scraped using the NBA API. 
 
-To identify individual players on the team, I will be using the spaCy library for entity recognition. After isolating player names, I will use the vaderSentiment library to determine the trending sentiment for each player at different periods in time.
+Basic text cleaning including lowercasing, removal of special characters, and gif and hyperlink elimination were applied to the text data. Entity recognition was implemented using a combination of domain knowledge and regex pattern trial-and-error. Part of speech resolving was utilized to solve text that contained words with double meaning, while co-reference resolving was used to extract additional entity mentions. 
 
-My ultimate goal is to develop an application that allows users to compare sentiment trends of different players over time. To enhance the user experience, I will also incorporate player statistics so that users can compare a player’s trending statistical performance with their trending sentiment.
+The vaderSentiment library was used for the task of unsupervised sentiment analysis. To improve the model various adjustments were made to the base lexicon including: emoji adjustments, basketball-related lexicon adjustments, nickname adjustments and sentence tokenization utilization. 
+
+
+Files and Uses
+reddit_requests.py: reddit data scraping 
+nba_scrape.py: nba stats scraping
+text_cleaning.py: general cleaning, entity recognition
+lakers_sentiment_analysis.py: Vader sia and spaCy nlp pipeline initiations; coreference resolving; basic sentiment
+sentiment_stats.py: further sentiment stats
+lakers_stats.py: contains TeamDate and PlayerDate classes used for player statistics and sentiment
+
